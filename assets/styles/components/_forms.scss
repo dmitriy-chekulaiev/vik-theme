@@ -1,0 +1,218 @@
+/** Search form */
+.search-form {
+  @extend .form-inline;
+}
+
+.search-form label {
+  @extend .form-group;
+
+  font-weight: normal;
+}
+
+.search-form .search-field {
+  @extend .form-control;
+}
+
+.search-form .search-submit {
+  @extend .btn;
+  @extend .btn-secondary;
+}
+
+.form-section {
+  overflow: hidden;
+  padding: 30px 0;
+
+  .row {
+    justify-content: space-around;
+  }
+
+  h2 {
+    text-align: left;
+    margin-bottom: 20px;
+    @media all and (max-width: $breakPointLg) {
+      margin-bottom: 10px;
+    }
+  }
+
+  p {
+    margin: 0;
+  }
+
+  .form-description, .form-content {
+    @include make-col(5);
+    padding: 0 30px;
+    display: flex;
+    align-items: center;
+
+    @media all and (max-width: $breakPointLg) {
+      @include make-col(12);
+      * {
+        width: 100%;
+      }
+    }
+
+  }
+
+  .form-description {
+    @media all and (max-width: $breakPointLg) {
+      * {
+        text-align: center;
+      }
+      p {
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  .gform_wrapper {
+    border-radius: 4px;
+    background-color: $textLight50;
+    padding: 27px 30px 40px 30px;
+    margin: 0;
+
+    ul.gform_fields li.gfield, .top_label div.ginput_container {
+      padding: 0;
+      margin: 0;
+    }
+
+    ul.gform_fields li.gfield {
+      margin-bottom: 17px;
+      position: relative;
+    }
+
+    .ginput_container {
+      width: 100% !important;
+      position: relative;
+
+      &:after {
+        font-family: "FontAwesome";
+        font-size: 14px;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 20px;
+      }
+
+      &.valid {
+        &:after {
+          content: "\f00c";
+          color: #7ED321;
+        }
+      }
+
+      &.no-valid {
+        &:after {
+          content: "\f00d";
+          color: #E31B23;
+        }
+      }
+    }
+
+    input, textarea {
+      margin-bottom: 0 !important;
+      border: 1px solid $headLineCOlor;
+      border-radius: 4px;
+      background-color: #FFFFFF;
+      width: 100% !important;
+      color: $headLineCOlor;
+      font-size: 16px;
+      padding-left: 10px !important;
+
+      &:active, &:focus {
+        border: 1px solid $primaryColor;
+        outline: none;
+      }
+    }
+
+    input {
+      padding-right: 30px !important;
+    }
+
+    .top_label .gfield_label, .gform_wrapper legend.gfield_label {
+      font-weight: 400;
+      color: $textDark;
+      font-size: 14px;
+      line-height: 1;
+      margin-bottom: 8px;
+
+      span {
+        display: none;
+      }
+    }
+
+
+  }
+
+  .gform_wrapper.gform_validation_error .gform_body ul li.gfield.gfield_error:not(.gf_left_half):not(.gf_right_half) {
+    max-width: 100% !important;
+
+    label {
+      margin: 0 0 8px;
+    }
+
+  }
+
+  .gform_wrapper li.gfield.gfield_error.gfield_contains_required div.ginput_container, .gform_wrapper li.gfield.gfield_error.gfield_contains_required label.gfield_label {
+    margin-top: 0 !important;
+  }
+
+  .gform_wrapper li.gfield.gfield_error, .gform_wrapper li.gfield.gfield_error.gfield_contains_required.gfield_creditcard_warning {
+    background: transparent;
+    border: none;
+  }
+
+  .gform_wrapper li.gfield_error input:not([type=radio]):not([type=checkbox]):not([type=submit]):not([type=button]):not([type=image]):not([type=file]), .gform_wrapper li.gfield_error textarea {
+
+  }
+
+  .gform_wrapper li.gfield.gfield_error.gfield_contains_required div.gfield_description {
+    font-size: 0;
+    position: absolute;
+    top: 0;
+
+    &:after {
+      content: ""
+    }
+  }
+
+  .gform_wrapper li.gfield_error input:not([type=radio]):not([type=checkbox]):not([type=submit]):not([type=button]):not([type=image]):not([type=file]), .gform_wrapper li.gfield_error textarea {
+    border-color: #E31B23;
+  }
+
+  .gform_wrapper div.validation_error {
+    color: #E31B23;
+    border: none;
+    font-family: $mainFont;
+  }
+
+  div.ginput_container_name span {
+    padding-right: 0;
+  }
+
+}
+
+.gform_wrapper .gform_footer {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.modal {
+  .modal-dialog {
+    max-width: 50%;
+    margin: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) !important;
+  }
+
+  .form-section {
+    padding: 0;
+  }
+}
+
+@media all and (max-width: $breakPointLg) {
+  .modal .modal-dialog {
+    width: 95%;
+    max-width: 95%;
+  }
+}

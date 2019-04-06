@@ -1,0 +1,188 @@
+* {
+  font-family: $mainFont;
+}
+
+.row {
+  @media all and (max-width: $breakPointSm) {
+
+  }
+}
+
+.container,.header__container {
+  @media all and (max-width: $breakPointSm) {
+    padding: 0 40px !important;
+  }
+}
+
+h1 {
+  font-size: 54px;
+  line-height: 1.185;
+  font-weight: 700;
+  color: $textDark;
+  @media all and (max-width: $breakPointMd) {
+    font-size: 40px;
+    line-height: 1.25;
+  }
+  @media all and (max-width: $breakPointSm) {
+    font-size: 24px;
+    line-height: 1.25;
+  }
+}
+
+h2 {
+  font-size: 40px;
+  line-height: 1.25;
+  font-weight: 700;
+  color: $textDark;
+  text-align: center;
+  @media all and (max-width: $breakPointMd) {
+    font-size: 20px;
+    line-height: 1.25;
+  }
+}
+
+h3 {
+  font-size: 24px;
+  line-height: 1.42;
+  font-weight: 500;
+  color: $textDark;
+  @media all and (max-width: $breakPointMd) {
+    font-size: 18px;
+    line-height: 1.25;
+  }
+}
+
+h4 {
+  font-size: 20px;
+  line-height: 1.5;
+  font-weight: 400;
+  color: $textDark;
+
+}
+
+.headline {
+  color: $headLineCOlor;
+  font-weight: 700;
+  margin: 0;
+}
+
+p {
+  font-size: 16px;
+  line-height: 1.875;
+  font-weight: 400;
+  color: $textDark;
+  @media all and (max-width: $breakPointSm) {
+    font-size: 14px;
+  }
+}
+
+a {
+  color: $primaryColor;
+  &:hover {
+    color: $headLineCOlor;
+  }
+}
+
+.vikings-button-text {
+  cursor: pointer;
+  color: $primaryColor;
+  position: relative;
+  display: inline-block;
+  margin-bottom: 14px;
+  position: relative;
+  transition: .3s ease;
+  font-weight: 500;
+  &:after {
+    content: "\f105";
+    font-family: 'FontAwesome';
+    font-size: 24px;
+    color: $primaryColor;
+    margin-left: 10px;
+    line-height: 1;
+    position: absolute;
+    right: -18px;
+    top: calc(50% - 1px);
+    transform: translateY(-50%);
+    transition: .3s ease;
+  }
+
+  &:before {
+    content: "\f105";
+    font-family: 'FontAwesome';
+    font-weight: bold;
+    font-size: 24px;
+    color: $headLineCOlor;
+    margin-left: 10px;
+    line-height: 1;
+    position: absolute;
+    right: -18px;
+    top: calc(50% - 1px);
+    transform: translateY(-50%);
+    opacity: .3;
+  }
+
+  &:hover {
+    color: $headLineCOlor;
+    &:after {
+      right: -28px;
+      color: $headLineCOlor;
+    }
+  }
+}
+
+.vikings-button-standart {
+  cursor: pointer;
+  transition: .3s ease;
+  color: #ffffff;
+  border-radius: 4px;
+  line-height: 1 !important;
+
+  &:hover {
+    background-color: $primaryColorDark;
+    border: 1px solid $primaryColorDark;
+    color: #fff;
+  }
+}
+
+.small-button,.small-ghost-button  {
+  padding: 15px 70px;
+  font-size: 14px;
+  font-weight: 500;
+  border: 1px solid transparent;
+}
+
+.large-button, .large-ghost-button {
+  padding: 21px 96px;
+
+}
+
+.large-button, .small-button {
+  background-color: $primaryColor;
+  border: 1px solid $primaryColor;
+  display: inline-block;
+}
+
+.large-ghost-button, .small-ghost-button {
+  border: 1px solid transparent;
+  background-color: #fff;
+  display: inline-block;
+}
+
+.gform_wrapper .gform_footer input.button, .gform_wrapper .gform_footer input[type=submit], .gform_wrapper .gform_page_footer input.button, .gform_wrapper .gform_page_footer input[type=submit] {
+  background-color: $primaryColor;
+  border: 1px solid $primaryColor;
+  display: inline-block;
+  cursor: pointer;
+  transition: .3s ease;
+  color: #ffffff;
+  border-radius: 4px;
+  line-height: 1 !important;
+  padding: 20px 0;
+  margin: 0;
+
+  &:hover {
+    background-color: $primaryColorDark;
+    border: 1px solid $primaryColorDark;
+    color: #fff;
+  }
+}

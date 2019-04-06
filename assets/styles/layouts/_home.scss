@@ -1,0 +1,111 @@
+
+.homepage {
+
+  section {
+    background-color: #fff;
+
+    &:nth-child(even) {
+      background-color: $textLight50;
+    }
+  }
+
+  &__fashion-section {
+    padding: 0 0 48px 0;
+  }
+
+  &__links-section {
+    padding: 48px 0;
+    @media all and (max-width: $breakPointSm) {
+      padding: 45px 0 19px 0;
+    }
+  }
+
+  &__blog-section {
+    padding: 40px 0;
+  }
+
+  &__testimonials-section {
+    padding: 75px 0;
+    text-align: center;
+  }
+
+  &__banner-section {
+    padding: 70px 0 86px;
+
+    @media all and (max-width: $breakPointSm) {
+      padding: 32px 0 37px;
+    }
+
+    background-color: $primaryColor !important;
+    text-align: center;
+
+    h2, p {
+      color: #fff;
+    }
+
+    h2 {
+      margin-bottom: 12px;
+    }
+
+    p {
+      margin-bottom: 48px;
+    }
+
+    a {
+      color: $primaryColor;
+    }
+  }
+
+  &__form-section {
+    padding: 40px 0;
+
+    .container, .form-content {
+      @media all and (max-width: $breakPointSm) {
+        padding: 0 !important;
+      }
+    }
+
+    .row {
+      @media all and (max-width: $breakPointSm) {
+        margin: 0;
+      }
+    }
+
+    .gform_wrapper {
+      @media all and (max-width: $breakPointSm) {
+
+      }
+    }
+  }
+
+
+}
+
+.fashion-section {
+  padding: 0 0 48px 0;
+
+  .row {
+    justify-content: space-around;
+    margin: 0;
+  }
+
+  h2 {
+    margin-bottom: 53px;
+    letter-spacing: -0.4px;
+  }
+
+  &__checkbox-items {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+
+    .checkbox-item {
+
+    }
+  }
+}
+
+
+
+
+

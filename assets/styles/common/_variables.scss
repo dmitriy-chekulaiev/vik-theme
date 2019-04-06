@@ -1,0 +1,69 @@
+/** Import Bootstrap functions */
+/* stylelint-disable */
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import url('https://fonts.googleapis.com/css?family=Rubik:400,500,700');
+
+$theme-colors: (
+        primary: #27ae60
+);
+$navbar-dark-toggler-icon-bg: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='#{str-replace(str-replace(#{$navbar-dark-color}, "(", "%28"), ")", "%29")}' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+$navbar-light-toggler-icon-bg: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='#{str-replace(str-replace(#{$navbar-light-color}, "(", "%28"), ")", "%29")}' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+
+// Container sizes
+$sm: 540px;
+$md: 720px;
+$lg: 960px;
+$xl: 1212px;
+
+$container-max-widths: (
+        sm: $sm,
+        md: $md,
+        lg: $lg,
+        xl: $xl
+);
+
+// breakpoints
+$breakPointXs: 0;
+$breakPointSm: 576px;
+$breakPointMd: 768px;
+$breakPointLg: 992px;
+$breakPointXl: 1200px;
+$grid-breakpoints: (
+        xs: $breakPointXs,
+        sm: $breakPointSm,
+        md: $breakPointMd,
+        lg: $breakPointLg,
+        xl: $breakPointXl
+);
+
+
+// Fonts
+$mainFont: 'Rubik';
+
+// Colors
+
+// Primary Colors
+$primaryColor: #9826B2;
+$primaryColorLight: #B34FC9;
+$primaryColorDark: #7E1496;
+
+//Accents Colors
+$accentColor: #FFD800;
+$accentColorLight: #FFEA77;
+$accentColorDark: #F3CE00;
+
+//Grayscale palette
+$textDark: #353535;
+$textLight: #DBDBDB;
+$textDark50: #717171;
+$textLight50: #F5F5F5;
+
+// Headline color
+$headLineCOlor: #3F0D4B;
+
+// Gradient colors
+$gradientStart: $primaryColor;
+$gradientEnd: #C94ED9;
+
+

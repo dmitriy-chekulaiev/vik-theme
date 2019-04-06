@@ -1,0 +1,29 @@
+.default {
+
+  &__hosting-alternatives-section {
+    background-color: $textLight50;
+    .row {
+      margin: 0;
+    }
+  }
+
+  &__fashion-section {
+    padding-top: 50px;
+    background-color: $textLight50;
+  }
+
+  &__testimonials-section {
+    background-color: $textLight50;
+  }
+
+  &__blocks-section {
+    background-color: $textLight50;
+    padding-bottom: 35px;
+  }
+
+  &__accordion-section {
+    background-color: $textLight50;
+    padding-top: 35px;
+  }
+
+}

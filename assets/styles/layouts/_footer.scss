@@ -1,0 +1,75 @@
+.footer {
+  background-color: $textDark;
+  padding: 60px 0 30px;
+
+  &__row {
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+
+  &__column {
+    transform: translateX(-60px);
+    @media all and (max-width: $breakPointLg) {
+      @include make-col(12);
+      transform: none;
+      * {
+        text-align: center;
+      }
+    }
+
+    &:first-child {
+      transform: none;
+    }
+
+    &--full-width {
+      width: 100%;
+      text-align: center;
+      transform: none;
+    }
+
+    padding: 0 40px;
+
+    h5 {
+      color: $textDark50;
+      font-size: 18px;
+      line-height: 30px;
+      font-weight: 400;
+      margin: 0;
+    }
+
+    p, a {
+      color: $textLight50;
+      font-size: 16px;
+      line-height: 1.8;
+      font-weight: 400;
+      margin: 0;
+      display: block;
+      @media all and (max-width: $breakPointSm) {
+        font-size: 14px;
+        line-height: 26px;
+      }
+    }
+
+    a {
+      transition: .3s ease;
+
+      &:hover {
+        color: $primaryColor;
+      }
+    }
+
+    img {
+      width: 80px;
+      height: auto;
+      @media all and (max-width: $breakPointSm) {
+        width: 50px;
+        margin-bottom: 30px;
+      }
+    }
+
+    .column-item {
+      margin-bottom: 30px;
+    }
+
+  }
+}

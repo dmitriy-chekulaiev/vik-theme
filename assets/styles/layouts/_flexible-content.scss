@@ -1,0 +1,844 @@
+.fashion-section {
+  padding: 0 0 48px 0;
+
+  .row {
+    justify-content: space-around;
+    margin: 0;
+  }
+
+  .checkbox-item {
+    width: 450px;
+    @media all and (max-width: $breakPointLg) {
+      width: fit-content;
+      text-align: center;
+    }
+  }
+
+  h2 {
+    margin-bottom: 53px;
+    letter-spacing: -0.4px;
+    @media all and (max-width: $breakPointSm) {
+      margin-bottom: 20px !important;
+      padding: 0 15px;
+    }
+  }
+
+  &__checkbox-items {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+
+    .checkbox-item {
+
+    }
+  }
+
+
+}
+
+.links-section {
+  padding: 48px 0;
+
+  ul.slick-dots, .slick-arrow {
+    display: none !important;
+  }
+
+
+  .link-item {
+    margin-bottom: 30px;
+    @media all and (max-width: $breakPointLg) {
+      text-align: center;
+      width: 100%;
+      max-width: 100%;
+    }
+    @include make-col(4);
+    padding: 0px 30px 0 30px;
+
+    h3 {
+      position: relative;
+      padding-bottom: 17px;
+      margin-bottom: 17px;
+      padding-top: 50px;
+
+
+      &:after {
+        content: "";
+        width: 40px;
+        height: 4px;
+        background-color: $accentColor;
+        display: inline-block;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+      }
+
+      @media all and (max-width: $breakPointLg) {
+        padding-top: 6px;
+        width: fit-content;
+        margin: 0 auto 17px;
+        padding-left: 60px;
+        padding-bottom: 30px;
+        &:after {
+          left: 50%;
+          transform: translateX(-50%);
+        }
+
+      }
+
+    }
+
+  }
+}
+
+.checkbox-items {
+
+}
+
+.checkbox-item {
+  position: relative;
+
+  .check {
+    width: fit-content;
+    position: relative;
+
+    @media all and (max-width: $breakPointLg) {
+      margin: 0 auto;
+    }
+
+    &:after {
+      content: "";
+      position: absolute;
+      left: -45px;
+      top: 3px;
+      background: url("../images/checks.svg") no-repeat left top;
+      display: inline-block;
+      width: 45px;
+      height: 45px;
+    }
+
+  }
+
+  padding-left: 30px;
+}
+
+.blog-section {
+  ul.slick-dots, .slick-arrow {
+    display: none !important;
+  }
+
+  padding: 40px 0;
+
+  .row {
+    margin: 0 -30px;
+  }
+
+  .container {
+    padding: 0;
+  }
+
+  .blog-article {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 80px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    .article-thumbnail {
+      @media all and (max-width: $breakPointLg) {
+        width: 100%;
+        margin-bottom: 12px;
+      }
+      width: 50%;
+      padding: 0 30px;
+
+      & > div {
+        height: 364px;
+      }
+    }
+
+
+    .article-content {
+      padding: 0 30px;
+      width: 50%;
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      @media all and (max-width: $breakPointLg) {
+        width: 100%;
+      }
+      @media all and (max-width: $breakPointSm) {
+        a {
+          width: 100%;
+          text-align: center;
+        }
+      }
+
+
+      h2 {
+        text-align: left;
+        margin-bottom: 16px;
+      }
+
+      p {
+        margin-bottom: 21px;
+      }
+    }
+
+    &:nth-child(even) {
+      .article-thumbnail {
+        order: 2;
+      }
+
+      .article-content {
+        order: 1;
+      }
+    }
+  }
+}
+
+.testimonials-section {
+
+  @media all and (max-width: $breakPointLg) {
+    .slick-slider .slick-list {
+      padding-top: 30px;
+    }
+  }
+  @media all and (max-width: $breakPointSm) {
+    padding: 30px 0 23px !important;
+  }
+
+  ul.slick-dots, .slick-arrow {
+    display: none !important;
+  }
+
+  padding: 75px 0;
+  text-align: center;
+
+  h3 {
+    text-align: center;
+    width: 100%;
+    margin-bottom: 80px;
+    @media all and (max-width: $breakPointLg) {
+      margin-bottom: 10px;
+    }
+  }
+
+  .row {
+    margin: 0 -10px;
+    justify-content: center;
+  }
+
+  .container {
+    padding: 0;
+  }
+
+  .testimonial-item {
+    @include make-col(4);
+
+    @media all and (max-width: $breakPointLg) {
+      @include make-col(12);
+    }
+
+
+    padding: 0 10px;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .testimonial-item__content {
+    background-color: #fff;
+    width: 100%;
+    padding: 50px 25px 65px 25px;
+    position: relative;
+    @media all and (max-width: $breakPointSm) {
+      padding: 23px 5px 40px;
+    }
+
+    p {
+      margin: 0;
+    }
+
+    &:after {
+      content: "''";
+      font-size: 220px;
+      display: inline-block;
+      color: $accentColor;
+      font-style: italic;
+      position: absolute;
+      top: -55px;
+      left: calc(50% - 30px);
+      transform: translateX(-50%);
+      line-height: 1;
+
+      @media all and (max-width: $breakPointSm) {
+        font-size: 100px;
+        top: -25px;
+        left: calc(50% - 10px);
+      }
+
+    }
+  }
+
+  .testimonial-item__thumbnail {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: $textLight;
+    background-position: center center;
+    background-repeat: no-repeat;
+    margin: -40px auto 20px auto;
+    position: relative;
+    @media all and (max-width: $breakPointSm) {
+      width: 58px;
+      height: 58px;
+      margin: -29px auto 20px auto;
+    }
+  }
+
+  .testimonial-item__title {
+    p {
+      margin: 0;
+    }
+  }
+
+  .testimonial-item__position {
+    p {
+      color: $textDark50;
+      margin: 0;
+    }
+  }
+
+}
+
+.title-and-text-section {
+  padding-bottom: 40px;
+  @media all and (max-width: $breakPointSm) {
+    padding-bottom: 20px;
+  }
+
+  .row {
+    justify-content: space-around;
+
+    * {
+      width: 50%;
+      text-align: left;
+    }
+
+    a {
+      margin-top: 30px;
+      width: initial;
+    }
+
+    h2 {
+      padding-right: 60px;
+    }
+
+    @media all and (max-width: $breakPointLg) {
+      h2 {
+        margin-bottom: 10px;
+      }
+    }
+    @media all and (max-width: $breakPointLg) {
+      * {
+        width: 100%;
+        text-align: left;
+        margin: 0;
+
+        br {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+.hosting-alternatives-section {
+  padding: 70px 0 10px;
+  text-align: center;
+
+  .slick-dots, .slick-arrow {
+    display: none !important;
+  }
+
+  @media all and (max-width: $breakPointSm) {
+    h2 {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__with-tabs {
+    padding-bottom: 60px;
+    padding-top: 0;
+
+    .tabs-row {
+      margin: 0 -15px !important;
+    }
+  }
+
+  .hosting-alternatives__plans {
+    width: 100%;
+    @include make-row();
+    @media all and (max-width: $breakPointLg) {
+      margin: 0;
+    }
+
+    .hosting-plan {
+      @include make-col(4);
+      @media all and (max-width: $breakPointLg) {
+        @include make-col(12);
+        background-color: #fff;
+        box-shadow: 0 7px 24px 0 rgba(83, 83, 83, 0.1);
+        &:after {
+          display: none;
+        }
+      }
+      border-top: 4px solid transparent;
+      border-radius: 4px;
+      transition: .3s ease;
+      padding-bottom: 36px;
+      padding-top: 32px;
+      position: relative;
+      overflow: hidden;
+
+      &:after {
+        content: '';
+        height: 35%;
+        width: 150%;
+        background-color: rgba(152, 38, 178, 0.05);
+        display: inline-block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 4;
+        opacity: 0;
+        transition: .3s ease;
+        transform: translateY(-55px) translateX(-30px) rotate(-10deg);
+      }
+
+      &:hover {
+        border-top: 4px solid $primaryColor;
+        background-color: #FFFFFF;
+        box-shadow: 0 7px 24px 0 rgba(83, 83, 83, 0.1);
+
+        &:after {
+          opacity: 1;
+        }
+      }
+
+      h3 {
+        padding-bottom: 13px;
+        margin-bottom: 22px;
+        position: relative;
+
+        &:after {
+          content: "";
+          width: 40px;
+          height: 4px;
+          display: inline-block;
+          background-color: $accentColor;
+          position: absolute;
+          bottom: -4px;
+          left: 50%;
+          transform: translateX(-50%);
+        }
+      }
+
+      .hosting-plan-price {
+        font-size: 54px;
+        font-weight: 500;
+        letter-spacing: -0.84px;
+        line-height: 1.1;
+        text-align: center;
+        color: $primaryColor;
+        margin-bottom: 10px;
+      }
+
+      .hosting-plan-description {
+        color: $textDark50;
+        margin-bottom: 17px;
+      }
+
+      ul {
+        list-style: none;
+        padding: 0;
+        margin: 0 0 35px;
+
+        p {
+          margin: 0;
+        }
+      }
+    }
+  }
+
+  .row {
+    flex-wrap: wrap;
+
+  }
+
+  h2 {
+    margin-bottom: 20px;
+    width: 100%;
+  }
+
+  h4 {
+    width: 100%;
+    margin: 0;
+
+    span {
+      display: inline-block;
+      margin-bottom: 50px;
+      width: fit-content;
+      position: relative;
+      //
+      //&:after {
+      //  content: "";
+      //  width: 100%;
+      //  height: 4px;
+      //  display: inline-block;
+      //  border-radius: 4px 4px 0 0;
+      //  position: absolute;
+      //  background-color: $primaryColor;
+      //  bottom: 0;
+      //  left: 0;
+      //}
+    }
+  }
+
+}
+
+
+.blocks-section {
+  .slick-dots, .slick-arrow {
+    display: none !important;
+  }
+
+  .row {
+    margin: 0 -10px;
+  }
+
+  .container {
+    padding: 0;
+  }
+
+  .block-item {
+    padding: 0 10px;
+    @include make-col(6);
+    @media all and (max-width: $breakPointLg) {
+      @include make-col(12);
+    }
+
+    h3 {
+      margin-bottom: 22px;
+      padding-bottom: 22px;
+      position: relative;
+
+      &:after {
+        content: "";
+        width: 40px;
+        height: 4px;
+        background-color: $accentColor;
+        display: inline-block;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+      }
+    }
+
+    a {
+      margin: 0;
+    }
+
+    & > div {
+      border: 1px solid $textLight;
+      border-radius: 4px;
+      padding: 33px 40px;
+      transition: .3s ease;
+
+      * {
+        transition: .3s ease;
+      }
+
+      &:hover {
+        background-color: $primaryColor;
+
+        a:after {
+          color: #fff;
+        }
+
+        a:before {
+          opacity: .5;
+          color: #fff;
+        }
+
+        * {
+          color: #fff;
+        }
+      }
+    }
+  }
+}
+
+.accordion-section {
+  @media all and (max-width: $breakPointLg) {
+    padding-bottom: 30px;
+    .container {
+      width: 100%;
+      padding: 0 !important;
+    }
+  }
+  padding-bottom: 88px;
+
+  h3 {
+    margin-bottom: 42px;
+    text-align: center;
+    width: 100%;
+  }
+
+  .row {
+    margin: 0 -10px;
+  }
+
+  .container {
+    padding: 0;
+
+  }
+
+  .accordion-items {
+    @include make-col(6);
+    @media all and (max-width: $breakPointLg) {
+      @include make-col(12);
+    }
+    padding: 0 10px;
+
+  }
+
+  .accordion-item {
+
+    & > div {
+      background-color: #fff;
+    }
+
+    &:last-child {
+      border-bottom: 1px solid $primaryColor;
+    }
+
+    h5 {
+      padding: 8px 40px;
+      border-top: 1px solid $primaryColor;
+      font-size: 16px;
+      color: $primaryColor;
+      font-weight: 500;
+      line-height: 2.5;
+      cursor: pointer;
+      margin: 0;
+      position: relative;
+      z-index: 7;
+      background: url("../images/add.png") no-repeat center right 37px;
+      background-size: 15px 15px;
+      @media all and (max-width: $breakPointSm) {
+        font-size: 14px;
+        line-height: 26px;
+      }
+    }
+
+    p {
+      padding: 4px 18px 0 18px;
+      margin: 0 40px;
+      position: relative;
+
+      opacity: 0;
+      height: 0;
+      padding-top: 0;
+
+      &:after {
+        content: '';
+        width: 4px;
+        height: calc(100% - 20px);
+        display: inline-block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        background-color: $accentColor;
+      }
+    }
+
+    &.active {
+      p {
+        transition: .3s ease;
+        padding-top: 4px;
+        opacity: 1;
+        height: initial;
+        padding-bottom: 20px;
+      }
+
+      h5 {
+        background: url("../images/remove.png") no-repeat center right 37px;
+      }
+    }
+  }
+}
+
+
+.banner-section {
+  padding: 70px 0 86px;
+  background-color: $primaryColor !important;
+  text-align: center;
+
+  @media all and (max-width: $breakPointSm) {
+    padding: 32px 0 37px;
+  }
+
+  .additional-button {
+    background-color: transparent;
+    color: #fff;
+    border-color: #fff;
+  }
+
+  a {
+    margin: 0 10px;
+    @media all and (max-width: $breakPointSm) {
+      margin-bottom: 10px;
+    }
+  }
+
+  h2, p {
+    color: #fff;
+  }
+
+  h2 {
+    margin-bottom: 12px;
+  }
+
+  p {
+    margin-bottom: 48px;
+  }
+
+  a {
+    color: $primaryColor;
+  }
+}
+
+
+.hosting-tabs {
+  background-color: #fff;
+  margin-bottom: 64px;
+  border-top: 1px solid $textLight;
+  border-bottom: 1px solid $textLight;
+}
+
+.tabs-row {
+  display: flex;
+
+}
+
+.hosting-tab-title {
+  flex: 1;
+  border-left: 1px solid $textLight;
+  cursor: pointer;
+  transition: .3s ease;
+  color: $headLineCOlor;
+  font-size: 16px;
+  line-height: 2.5;
+  text-align: center;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &:hover, &.active-tab {
+    background-color: $textLight;
+  }
+
+  &.active-tab {
+    cursor: default;
+  }
+
+  &:last-child {
+    border-right: 1px solid $textLight;
+  }
+}
+
+.hosting-tab {
+
+  display: none;
+  width: 100%;
+
+  .tab-content {
+    @include make-row();
+    margin: 0;
+  }
+
+  &.active-tab {
+    display: block;
+  }
+}
+
+
+.checkboxes-section {
+  padding-bottom: 38px;
+  padding-top: 57px;
+
+  h3 {
+    @media all and (max-width: $breakPointLg) {
+      text-align: center;
+    }
+    width: 100%;
+    margin: 0 -15px;
+    margin-bottom: 20px;
+  }
+
+  .row {
+    margin: 0;
+    margin-bottom: 60px;
+
+    &:nth-of-type(even) {
+      .checkbox-item {
+        p {
+          color: $primaryColor;
+        }
+      }
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .checkbox-item {
+    padding-right: 40px;
+    @include make-col(4);
+    @media all and (max-width: $breakPointLg) {
+      @include make-col(6);
+    }
+    @media all and (max-width: $breakPointMd) {
+      @include make-col(12);
+    }
+  }
+}
+
+.content-section, .post-content {
+  padding-bottom: 30px;
+}
+
+.content-area, .site-content {
+  min-height: 200px;
+}
+
+.not-found {
+  h1 {
+    font-size: 80px;
+  }
+
+  * {
+    text-align: center;
+    width: 100%;
+  }
+}
+
+
+.default__hosting-alternatives-section.hosting-alternatives-section.hosting-alternatives-section__with-tabs {
+
+}
